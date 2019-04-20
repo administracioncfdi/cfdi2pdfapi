@@ -1,0 +1,36 @@
+{
+  "name": "cfdi2pdfapi",
+  "version": "1.0.0",
+  "description": "cfdi2pdf API Wrapper",
+  "main": "handler.js",
+  "scripts": {
+    "deploy:staging": "wt create --name cfdi2pdfapi-staging --bundle handler.js",
+    "deploy:production": "wt create --name cfdi2pdfapi-production --bundle handler.js",
+    "start": "nodemon ./bin/www",
+    "test": "mocha"
+  },
+  "keywords": [
+    "webtasks"
+  ],
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.16.4",
+    "standard": "^10.0.3",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cfdi2pdf": "^2.1.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "webtask-tools": "^3.4.0"
+  }
+}
