@@ -9,10 +9,10 @@ const app = express();
 
 app.use(logger('tiny'));
 app.use(bodyParser.json({ limit: '15mb' }));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ limit: '15mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const VERSION = '2.1.0';
+const VERSION = '2.1.1';
 
 const fonts = {
   Roboto: {
@@ -20,6 +20,12 @@ const fonts = {
     bold: `/data/_verquire/cfdi2pdf/${VERSION}/node_modules/cfdi2pdf/fonts/Roboto/Roboto-Medium.ttf`,
     italics: `/data/_verquire/cfdi2pdf/${VERSION}/node_modules/cfdi2pdf/fonts/Roboto/Roboto-Italic.ttf`,
     bolditalics: `/data/_verquire/cfdi2pdf/${VERSION}/node_modules/cfdi2pdf/fonts/Roboto/Roboto-MediumItalic.ttf`,
+  },
+  Courier: {
+    normal: 'Courier',
+    bold: 'Courier-Bold',
+    italics: 'Courier-Oblique',
+    bolditalics: 'Courier-BoldOblique',
   },
 };
 
