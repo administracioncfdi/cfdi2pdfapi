@@ -12,7 +12,7 @@ app.use(bodyParser.json({ limit: '15mb' }));
 app.use(bodyParser.urlencoded({ limit: '15mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const VERSION = '2.1.1';
+const VERSION = '2.1.2';
 
 const fonts = {
   Roboto: {
