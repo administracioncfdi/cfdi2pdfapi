@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cfdi2pdf": "2.1.2",
+    "cfdi2pdf": "2.1.3",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "webtask-tools": "^3.4.0"
